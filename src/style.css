@@ -297,24 +297,20 @@ button:focus {
   height: 100%;
 }
 
-.home-header {
-  padding-top: 80px !important;
-}
-
 .home-section {
   position: relative;
-  z-index: -1;
   background-image: url(./Assets/GNTV-bg-home.svg);
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
   background-size: cover;
-  height: 100vw;
+  padding-left: 20px!important;
+  padding-right: 20px!important;
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
+  padding: 5rem 0 5rem !important;
   color: whitesmoke;
   text-align: left;
 }
@@ -341,6 +337,47 @@ button:focus {
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #b562d6 !important;
+}
+
+.home-header {
+  width: 30%!important;
+}
+
+.home-header p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.home-header a.join-btn {
+  background: #61d5d8;
+  color: #000;
+  text-decoration: none;
+  border-radius: 27px;
+  font-size: 16px;
+  line-height: 42px;
+  display: flex;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 130px;
+  height: 42px;
+  align-items: center;
+  transition: all 0.3s ease-out 0s;
+  justify-content: center;
+}
+
+.home-header a.join-btn:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.home-header h2.title {
+  font-size: 33px!important;
+  font-weight: 600;
+  line-height: 33.7px;
+  color: #61d5d8;
+  font-family: "Assistant", sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -517,6 +554,7 @@ button:focus {
   color: #7A7A7A;
   font-family: "Roboto", sans-serif;
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .footer-left-sec a.email {
