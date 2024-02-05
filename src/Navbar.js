@@ -54,19 +54,19 @@ function NavBar() {
               </Nav.Item>
 
               <Nav.Item>
-                <Nav.Link href="#" rel="noreferrer">
+                <Nav.Link as={Link} to="/featured">
                   Featured
                 </Nav.Link>
               </Nav.Item>
 
               <Nav.Item>
-                <Nav.Link href="#" rel="noreferrer">
+                <Nav.Link as={Link} to="/interocitor">
                   Interocitor™
                 </Nav.Link>
               </Nav.Item>
 
               <Nav.Item>
-                <Nav.Link href="#" rel="noreferrer">
+                <Nav.Link as={Link} to="/beta">
                   Beta
                 </Nav.Link>
               </Nav.Item>

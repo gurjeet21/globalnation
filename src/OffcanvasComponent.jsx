@@ -25,19 +25,19 @@ function OffcanvasComponent({ show, onHide }) {
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link as={Link} to="#">
-              Demo
+            <Nav.Link as={Link} to="/demo">
+                  Demo
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link href="#" rel="noreferrer">
+            <Nav.Link as={Link} to="/featured">
               Featured
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link href="#" rel="noreferrer">
+            <Nav.Link as={Link} to="/interocitor">
               Interocitor™
             </Nav.Link>
           </Nav.Item>

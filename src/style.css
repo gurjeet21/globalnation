@@ -189,23 +189,6 @@ button:focus {
   background-color: #61d5d8;
 }
 
-@media (max-width: 767px) {
-  .navbar {
-    padding: 0.625rem !important;
-    font-size: 1vw !important;
-    background-color: #181a27 !important;
-  }
-  .navbar .container-fluid{
-    padding: 0!important;
-  }
-  .logo {
-    height: auto!important;
-    width: 12.375em !important;
-  }
-  .navbar-collapse {
-    display: none !important;
-  }
-}
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
@@ -223,12 +206,6 @@ button:focus {
 
 .nav-link {
   padding: 0.8rem 1rem !important;
-}
-
-@media (max-width: 767px) {
-  .nav-link {
-    padding: 0.7rem 1rem !important;
-  }
 }
 
 .navbar-nav .nav-item {
@@ -251,6 +228,25 @@ button:focus {
   background-color: #00B6BF;
   border-color: #B4C8DC;
 }
+
+@media(min-width: 768px){
+  .home-section {
+    position: relative;
+    background-image: url(./Assets/GNTV-bg-home.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-bottom: 30px !important;
+    padding-top: 30px !important;
+    background-size: cover;
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+    height: 100vh;
+  }
+  .home-header {
+    width: 30%!important;
+  }
+}
+
 
 /* --------- */
 /* Home section */
@@ -297,9 +293,9 @@ button:focus {
   height: 100%;
 }
 
-.home-section {
+.landing-page-bg {
   position: relative;
-  background-image: url(./Assets/GNTV-bg-home.svg);
+  background-image: url(./Assets/GNTV_BG_Landing-Page.svg);
   background-position: top center;
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
@@ -307,6 +303,7 @@ button:focus {
   background-size: cover;
   padding-left: 20px!important;
   padding-right: 20px!important;
+  height: 100vh;
 }
 
 .home-content {
@@ -337,10 +334,6 @@ button:focus {
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #b562d6 !important;
-}
-
-.home-header {
-  width: 30%!important;
 }
 
 .home-header p {
@@ -380,27 +373,16 @@ button:focus {
   font-family: "Assistant", sans-serif;
 }
 
-@media (max-width: 767px) {
-  .Typewriter__wrapper {
-    font-size: 1.4em !important;
-    font-weight: 500 !important;
-    position: absolute !important;
-  }
-  .Typewriter__cursor {
-    display: none !important;
-  }
+.video-section{
+  padding: 25px 15px;
+  background: #00000073;
+  border: 3px solid #FFFFFF47;
+  border-radius: 35px 35px 15px 15px;
 }
 
 .myAvtar {
   justify-content: center !important;
   padding-top: 9em !important;
-}
-
-@media (max-width: 767px) {
-  .myAvtar {
-    padding-top: 2em !important;
-    padding-bottom: 2em !important;
-  }
 }
 
 .home-about-section {
@@ -563,16 +545,6 @@ button:focus {
   font-family: "Roboto", sans-serif;
 }
 
-@media (max-width: 767px) {
-  .footer-copywright {
-    text-align: center !important;
-  }
-
-  .footer-body {
-    text-align: center !important;
-  }
-}
-
 .footer h3 {
   font-size: 1em;
   color: white !important;
@@ -712,12 +684,6 @@ button:focus {
   transition: all 0.4s ease 0s !important;
 }
 
-@media (max-width: 767px) {
-  .tech-icons {
-    margin: 10px !important;
-  }
-}
-
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
@@ -738,98 +704,6 @@ button:focus {
   list-style: none !important;
   text-align: left !important;
   padding-left: 1px !important;
-}
-
-@media (max-width: 767px) {
-  .about-img {
-    padding-top: 0 !important;
-  }
-}
-/* --------- */
-/* Resume */
-/* --------- */
-
-.resume-section {
-  position: relative !important;
-  padding-top: 110px !important;
-  padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
-  color: white !important;
-}
-
-.resume {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  justify-content: center;
-}
-
-.resume-left {
-  padding-right: 80px !important;
-}
-
-.resume-right {
-  padding-left: 80px !important;
-}
-
-@media (max-width: 767px) {
-  .resume-left {
-    padding-right: 15px !important;
-    padding-left: 15px !important;
-  }
-
-  .resume-right {
-    padding-right: 15px !important;
-    padding-left: 15px !important;
-  }
-}
-.resume .resume-title {
-  font-size: 2em;
-  font-weight: 700;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.resume .resume-item {
-  padding: 0 0 10px 25px;
-  margin-top: -2px;
-  border-left: 2px solid #8a49a8;
-  position: relative;
-}
-
-.resume .resume-item .resume-title {
-  line-height: 18px;
-  font-size: 0.9em;
-  background: #5234795d;
-  padding: 8px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.resume .resume-item ul {
-  padding-left: 20px;
-  text-align: justify;
-}
-
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-  list-style: none;
-}
-
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #8a49a8;
 }
 
 .like-item {
@@ -858,6 +732,150 @@ button:focus {
   animation-fill-mode: forwards;
   animation-duration: 0.85s;
 }
+
+.services-main{
+  background-color:#0B1321;
+  padding: 130px 80px 30px!important;
+}
+
+.service-icon svg{
+  width: 15vw;
+}
+
+.service-content {
+  color: #fff;
+  font-family: 'Poppins';
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.service-content .title {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.service-content .sub-title {
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.service-content p{
+  font-weight: 200;
+}
+
+
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0.625rem !important;
+    font-size: 1vw !important;
+    background-color: #181a27 !important;
+  }
+  .navbar .container-fluid{
+    padding: 0!important;
+  }
+  .logo {
+    height: auto!important;
+    width: 12.375em !important;
+  }
+  .navbar-collapse {
+    display: none !important;
+  }
+  .nav-link {
+    padding: 0.7rem 1rem !important;
+  }
+  .Typewriter__wrapper {
+    font-size: 1.4em !important;
+    font-weight: 500 !important;
+    position: absolute !important;
+  }
+  .Typewriter__cursor {
+    display: none !important;
+  }
+  .myAvtar {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+  }
+  .footer-copywright {
+    text-align: center !important;
+  }
+  .footer-body {
+    text-align: center !important;
+  }
+  .tech-icons {
+    margin: 10px !important;
+  }
+  .about-img {
+    padding-top: 0 !important;
+  }
+  .home-section {
+    position: relative;
+    background-image: url(./Assets/GNTV_BG_Landing-Page_Mobile-Phone_02.01.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 30px !important;
+    padding-top: 30px !important;
+    background-size: contain;
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+    height: 100vh;
+  }
+  .home-section:before {
+    content: '';
+    background-image: url(./Assets/GNTV_BG_Landing-Page_Mobile-Phone.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-size: contain;
+    top: 0;
+  }
+  .home-content{
+    margin-top: 430px;
+    padding-top: 10px!important;
+  }
+  .home-header h2.title {
+    font-size: 24px!important;
+    line-height: 34px;
+  }
+  .home-header p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .home-header a.join-btn{
+    margin: 0 auto;
+  }
+  .home-header{
+    text-align: center;
+  }
+  .service-icon svg {
+    width: 45vw!important;
+  }
+  .service-content .title{
+    font-size: 30px!important;
+  }
+  .service-content .sub-title{
+    font-size: 18px!important;
+  }
+  .service-content p{
+    font-size: 14px!important;
+    line-height: 21px!important;
+  }
+  .services-main {
+    background-color: #0B1321;
+    padding: 40px 20px 24px!important;
+  }
+  .services-main .row{
+    grid-gap: 40px;
+  }
+}
+
 @keyframes likeAnimation {
   0% {
     transform: scale(1.5);
