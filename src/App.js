@@ -1,34 +1,23 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home/Home";
-import Footer from "./components/Footer";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./Home2";
+import Demo from "./pages/Demo";
 
-function App() {
-
+const App = () => {
   return (
-    <Router>
-
-      <div className="App" >
-        <Navbar />
-        <ScrollToTop />
+    <>
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="/demo" element={<Demo/>} /> {/* Add this line for the /demo route */}
         </Routes>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;

@@ -3,7 +3,7 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import logo from "../Assets/Logo_GNTV.png";
+import logo from "./Assets/Logo_GNTV.png";
 
 function OffcanvasComponent({ show, onHide }) {
   return (

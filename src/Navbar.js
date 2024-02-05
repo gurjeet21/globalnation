@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/Logo_GNTV.png";
+import logo from "./Assets/Logo_GNTV.png";
 import { Link } from "react-router-dom";
 import OffcanvasComponent from "./OffcanvasComponent";
 
@@ -48,7 +48,7 @@ function NavBar() {
               </Nav.Item>
 
               <Nav.Item>
-                <Nav.Link as={Link} to="#">
+                <Nav.Link as={Link} to="/demo">
                   Demo
                 </Nav.Link>
               </Nav.Item>
