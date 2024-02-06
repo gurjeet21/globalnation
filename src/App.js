@@ -8,6 +8,8 @@ import Demo from "./pages/Demo";
 import Featured from "./pages/Featured";
 import Interocitor from "./pages/Interocitor";
 import Beta from "./pages/Beta";
+import Download from "./pages/Downloads";
+import NDA from "./pages/Nda";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
           <Route path="/featured" element={<Featured/>} />
           <Route path="/interocitor" element={<Interocitor/>} />
           <Route path="/beta" element={<Beta/>} />
+          <Route path="/downloads" element={<Download/>} />
+          <Route path="/nda" element={<NDA/>} />
         </Routes>
       </Router>
     </>

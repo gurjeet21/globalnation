@@ -258,6 +258,52 @@ h1.section-title {
   min-height: 920px;
 }
 
+.nda-section iframe{
+  min-height: 2060px;
+}
+
+.download-section .download-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.download-section .download-title {
+  color: #8CEFE9;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 33.7px;
+}
+
+.download-section p.download-main-para {
+  font-size: 20px;
+  line-height: 30px;
+  color: #8b95a6;
+}
+
+.download-section p.download-main-para span{
+  color: #fff;
+}
+
+.download-section ul li{
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.download-btn svg {
+  width: 15px;
+}
+
+.download-section .row {
+  min-height: 100vh;
+}
+
+.download-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 @media(min-width: 768px){
   .home-section {
     position: relative;
@@ -280,8 +326,10 @@ h1.section-title {
     margin-top: 85px;
   }
   .featured-artist-main .row{
-    max-width: 90vw;
     margin: 0 auto;
+  }
+  .landing-page-bg{
+    padding: 30px 50px!important;
   }
   .interoritor-section {
     position: relative;
@@ -291,8 +339,8 @@ h1.section-title {
     padding-bottom: 2% !important;
     padding-top: 2% !important;
     background-size: cover;
-    padding-left: 26px!important;
-    padding-right: 26px!important;
+    padding-left: 50px!important;
+    padding-right: 50px!important;
     height: 100%;
     min-height: 100vh;
   }
@@ -303,6 +351,10 @@ h1.section-title {
     justify-content: center;
     display: flex;
     flex-direction: column;
+  }
+  .download-content-sec {
+      max-width: 60%;
+      margin: 0 auto;
   }
 }
 
@@ -401,7 +453,7 @@ h1.section-title {
   font-weight: 300;
 }
 
-.home-header a.join-btn, .interoritor-header a.join-btn {
+.home-header a.join-btn, .interoritor-header a.join-btn, .download-section .download-btn {
   background: #61d5d8;
   color: #000;
   text-decoration: none;
@@ -411,17 +463,29 @@ h1.section-title {
   display: flex;
   margin-top: 40px;
   width: 100%;
-  max-width: 130px;
+  min-width: 130px;
   height: 42px;
   align-items: center;
   transition: all 0.3s ease-out 0s;
   justify-content: center;
 }
 
-.home-header a.join-btn:hover, .interoritor-header a.join-btn:hover {
+.download-section .download-btn{
+  margin-top: 0!important;
+  grid-gap: 6px;
+}
+
+.home-header a.join-btn:hover, 
+.interoritor-header a.join-btn:hover {
   background: #000;
   color: #fff;
   border: 1px solid #fff;
+}
+
+.download-section .download-btn:hover{
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
 }
 
 .home-header h2.title, .interoritor-header h2.title {
@@ -992,6 +1056,13 @@ h1.section-title {
   }
   .featured-artist-main .row{
     grid-gap: 20px;
+  }
+  .download-content-sec {
+    margin-top: 30px;
+  }
+  .download-section .download-title {
+    font-size: 18px;
+    line-height: 1.2;
   }
 }
 
