@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import logo from "./Assets/Logo_GNTV.png";
 import { Link } from "react-router-dom";
 import OffcanvasComponent from "./OffcanvasComponent";
+import ServiceCreate from './Assets/Svg/ServiceCreate';
 
 function NavBar() {
   const [navColour, updateNavbar] = useState(false);
@@ -30,6 +31,7 @@ function NavBar() {
         <Container fluid>
           <Navbar.Brand href="/" className="d-flex justify-content-center">
             <img src={logo} className="img-fluid logo" alt="brand" />
+            <logo/>
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"

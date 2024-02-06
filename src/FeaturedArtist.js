@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const FeaturedArtist = () => {
     return (
-        <Container fluid className='featured-artist-main landing-page-bg d-flex  align-items-center'>
+        <Container fluid className='featured-artist-main landing-page-bg d-flex align-items-center'>
             <Row className='justify-content-center align-items-center'>
                 <h1 className="section-title">Featured Artist</h1>
                 <Col xs={12} md={6} lg={4} className="aspect-ratio aspect-ratio-16x9">

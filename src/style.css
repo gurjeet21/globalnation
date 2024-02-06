@@ -245,6 +245,19 @@ h1.section-title {
   color: #7A7A7A;
 }
 
+.beta-section {
+  padding: 36px 26px;
+}
+
+.beta-section, .beta-section div {
+  height: 100%!important;
+  min-height: 100vh!important;
+}
+
+.beta-section iframe{
+  min-height: 920px;
+}
+
 @media(min-width: 768px){
   .home-section {
     position: relative;
