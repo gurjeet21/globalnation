@@ -20,7 +20,7 @@ function Footer() {
       <Row>
         <Col md="8" className="footer-left-sec text-left">
           <h2 className="heading-title">
-            <a href="https://globalnation.tv/">Global<span>Nation™</span></a>
+            <Link to="/">Global<span>Nation™</span></Link>
           </h2>
           <p>
             If you would like to know more about our mission or want to be an active part

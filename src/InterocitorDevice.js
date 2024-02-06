@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 const InterocitorDevice = () => {
     return (
         <section>
@@ -13,7 +13,7 @@ const InterocitorDevice = () => {
                   <p>Use our Interocitor™ device (toolkit) to create unique experiences called “Shows”, that consist of assets from our toolkit library, or uploads from your own portfolio.</p>
                   <p>Assets can be animated with a number of modifiers and even respond to user actions to create interative shows.</p>
                   <p>Be one of the first creators to learn how to master our unique and powerful Interocitor™ device!</p>
-                  <a className="join-btn" href="#">Join the Beta</a>
+                  <Link to="/beta" className="join-btn">Join the Beta</Link>
                 </Col>
               </Row>
           </Container>

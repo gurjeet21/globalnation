@@ -587,6 +587,16 @@ h1.section-title {
   font-size: 20px;
   text-align: left;
   font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.heading-title a span {
+  color: #61D5D8;
+}
+
+.heading-title a:hover {
+  color: #fff;
 }
 
 .footer-left-sec p {
