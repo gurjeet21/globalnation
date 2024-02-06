@@ -4,18 +4,19 @@ import { Container, Row, Col } from "react-bootstrap";
 const InterocitorDevice = () => {
     return (
         <section>
-            <Container fluid className="featured-artist-section landing-page-bg">
-                <Container fluid className="home-content">
-                    <Row className="d-flex justify-content-center align-items-center">
-                        <Col md={5}>
-                            {/* Assuming you have an iframe for the video */}
-                            <div className="embed-responsive embed-responsive-16by9 video-section">
-                                <div className="title">The Interocitor Device</div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </Container>
+          <Container fluid className="interoritor-section">
+              <Row className="interoritor-content min-h-100">
+                <Col md={4} className="interoritor-header">
+                  <h2 className="title">
+                  The Interocitor™ device
+                  </h2>
+                  <p>Use our Interocitor™ device (toolkit) to create unique experiences called “Shows”, that consist of assets from our toolkit library, or uploads from your own portfolio.</p>
+                  <p>Assets can be animated with a number of modifiers and even respond to user actions to create interative shows.</p>
+                  <p>Be one of the first creators to learn how to master our unique and powerful Interocitor™ device!</p>
+                  <a className="join-btn" href="#">Join the Beta</a>
+                </Col>
+              </Row>
+          </Container>
         </section>
     );
 };
