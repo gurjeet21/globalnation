@@ -1,11 +1,12 @@
 // OffcanvasComponent.jsx
-import React from "react";
+import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
-import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import logo from "./Assets/Logo_GNTV.png";
+import { NavLink } from "react-router-dom";
 
 function OffcanvasComponent({ show, onHide }) {
+  const [navColour, updateNavbar] = useState(false);
   return (
     <Offcanvas show={show} onHide={onHide} placement="end">
       <Offcanvas.Header closeButton>
@@ -19,31 +20,31 @@ function OffcanvasComponent({ show, onHide }) {
         </Offcanvas.Title>
         <Nav defaultActiveKey="#home">
           <Nav.Item>
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={NavLink} to="/">
               Home
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link as={Link} to="/demo">
+            <Nav.Link as={NavLink} to="/demo">
                   Demo
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link as={Link} to="/featured">
+            <Nav.Link as={NavLink} to="/featured">
               Featured
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link as={Link} to="/interocitor">
+            <Nav.Link as={NavLink} to="/interocitor">
               Interocitor™
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link href="#" rel="noreferrer">
+            <Nav.Link as={NavLink} to="/beta">
               Beta
             </Nav.Link>
           </Nav.Item>

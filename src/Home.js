@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import Footer from "./Footer";
 import Services from "./Services";
+import CreateUniqueExperience from "./CreateUniqueExperience";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Navbar />
       <Header />
       <Services/>
+      <CreateUniqueExperience/>
       <Footer />
     </>
   );
