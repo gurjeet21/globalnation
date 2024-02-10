@@ -19,7 +19,7 @@ const DownlaodSection = () => {
                     </div>
 
                     <div className="download-row">
-                        <div className="download-title">Win X64 v.0.7.1* Windows X64 v.0.7.1*</div>
+                        <div className="download-title">Win X64 v.0.7.1*</div>
                         <div className="download-button">
                         <Link to="/beta" className="download-btn"><DownloadIcon/>Download</Link>
                         </div>
@@ -32,7 +32,7 @@ const DownlaodSection = () => {
                         </div>
                     </div>
 
-                    <div className="download-row">
+                    <div className="download-row last-row">
                         <div className="download-title">iOS/iPadOS**</div>
                         <div className="download-button">
                         <Link to="/beta" className="download-btn"><EmailIcon/>Email Us</Link>

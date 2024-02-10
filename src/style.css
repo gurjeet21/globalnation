@@ -1,9 +1,9 @@
 html {
-  --section-background-color: linear-gradient(
+  /* --section-background-color: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.582),
     rgba(12, 8, 24, 0.904)
-  );
+  ); */
 
   --image-gradient: linear-gradient(
     to bottom left,
@@ -25,7 +25,7 @@ button:focus {
 /* --------- */
 /*  Preloader */
 /* --------- */
-#preloader {
+/* #preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -36,7 +36,7 @@ button:focus {
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
 
 #preloader-none {
   opacity: 0;
@@ -88,6 +88,12 @@ button:focus {
   font-size: 1vw !important;
   background-color: #0c1321ba;
   padding: 5px!important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar-toggler {
@@ -184,7 +190,7 @@ button:focus {
   color: white !important;
   padding-right: 0.625rem !important;
   padding-left: 0.625rem !important;
-  border: 1px solid #2F3642!important;
+  border: 1px solid #515152!important;
   background: #2f3642b8!important;
 }
 
@@ -209,8 +215,8 @@ button:focus {
   text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 .navbar-nav .nav-item a:hover{
-  background-color: #00B6BF;
-  border-color: #B4C8DC;
+  border: 1px solid #00B6BF!important;
+  background: #00b6bf4f!important;
 }
 h1.section-title {
   font-family: "Poppins", Sans-serif;
@@ -257,7 +263,6 @@ h1.section-title {
 
 .beta-section, .beta-section div {
   height: 100%!important;
-  min-height: 100vh!important;
 }
 
 .beta-section iframe{
@@ -265,7 +270,7 @@ h1.section-title {
 }
 
 .nda-section iframe{
-  min-height: 2060px;
+  min-height: 2150px;
 }
 
 .download-section .download-row {
@@ -285,6 +290,7 @@ h1.section-title {
   font-size: 20px;
   line-height: 30px;
   color: #8b95a6;
+  margin-bottom: 40px;
 }
 
 .download-section p.download-main-para span{
@@ -328,6 +334,18 @@ h1.section-title {
 }
 
 @media(min-width: 768px){
+  .download-section .row,
+  .beta-section .row,
+  .gntvintroevent-section .row,
+  .featured-artist-main .row {
+    padding-top: 56px;
+  }
+  .nda-section .row{
+    padding-top: 86px;
+  }
+  .interoritor-mobile-img{
+    display:none!important;
+  }
   .home-section {
     position: relative;
     background-image: url(./Assets/GNTV-bg-home.svg);
@@ -344,10 +362,10 @@ h1.section-title {
   .home-header {
     width: 30%!important;
   }
-  .landing-page-bg,
+  /* .landing-page-bg,
   .interoritor-section{
     margin-top: 85px;
-  }
+  } */
   .featured-artist-main .row{
     margin: 0 auto;
   }
@@ -359,13 +377,13 @@ h1.section-title {
     background-image: url(./Assets/GNTV_Interocitor_Panels.webp);
     background-position: center;
     background-repeat: no-repeat;
-    padding-bottom: 2% !important;
-    padding-top: 2% !important;
     background-size: cover;
     padding-left: 50px!important;
     padding-right: 50px!important;
     height: 100%;
     min-height: 100vh;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
   .interoritor-content{
     min-height: 100vh;
@@ -376,8 +394,34 @@ h1.section-title {
     flex-direction: column;
   }
   .download-content-sec {
-      max-width: 60%;
+      max-width: 50%;
       margin: 0 auto;
+  }
+  .download-row.last-row {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1022px) {
+  .interoritor-section{
+    background-position: 30%;
+  }
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1199px) {
+  .interoritor-section{
+    background-position: 36%;
+  }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .interoritor-content .interoritor-header {
+    padding-right: 7%;
+  }
+}
+
+@media(min-width: 2100px){
+  .gntvintroevent-section .col-md-10{
+    max-width: calc(100% - 25%);
   }
 }
 
@@ -434,7 +478,7 @@ h1.section-title {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .home-content {
@@ -901,12 +945,21 @@ h1.section-title {
 
 .services-main{
   background-color:#0B1321;
-  padding: 130px 80px 30px!important;
+  padding: 100px 80px 100px!important;
+  height: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  display: flex;
 }
 
 .experience-container{
-  padding: 130px 80px 130px!important;
-  background-color:#000;
+  padding: 100px 80px 100px!important;
+  background-color: #000;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .service-icon svg{
@@ -971,6 +1024,16 @@ h1.section-title {
 
 
 @media (max-width: 767px) {
+  .download-section p.download-main-para{
+    margin-bottom: 20px!important;
+  }
+  .gntvintroevent-section .video-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 72px;
+  }
   .navbar {
     padding: 0.625rem 1.25rem!important;
     font-size: 1vw !important;
@@ -1022,7 +1085,9 @@ h1.section-title {
     min-height: 90vh;
     display: flex;
     margin-top: 74px;
+    height: 100vh;
   }
+
   .interoritor-section{
     display: block!important;
   }
@@ -1059,15 +1124,18 @@ h1.section-title {
     flex-grow: 0;
     flex-shrink: 0;
   }
-  .home-header h2.title {
+  .home-header h2.title,
+  .interoritor-header h2.title{
     font-size: 24px!important;
     line-height: 34px;
   }
-  .home-header p {
+  .home-header p,
+  .interoritor-header p {
     font-size: 14px;
     line-height: 21px;
   }
-  .home-header a.join-btn{
+  .home-header a.join-btn,
+  .interoritor-header a.join-btn{
     margin: 0 auto;
   }
   .home-header{
@@ -1118,6 +1186,15 @@ h1.section-title {
   }
   .offcanvas-body a.nav-link.active{
     color: #61D5D8;
+  }
+  img.interoritor-mobile-img {
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+  }
+  .interior-inner{
+    padding: 40px 20px;
+    text-align: center;
   }
 }
 
