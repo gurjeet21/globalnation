@@ -257,7 +257,8 @@ h1.section-title {
   color: #7A7A7A;
 }
 
-.beta-section {
+.beta-section,
+.nda-section {
   padding: 36px 26px;
 }
 
@@ -1037,7 +1038,12 @@ h1.section-title {
   .navbar {
     padding: 0.625rem 1.25rem!important;
     font-size: 1vw !important;
-    background-color: #181a27 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   .navbar .container-fluid{
     padding: 0!important;
@@ -1082,9 +1088,8 @@ h1.section-title {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
-    margin-top: 74px;
     height: 100vh;
   }
 
@@ -1103,7 +1108,7 @@ h1.section-title {
     left: 0;
     right: 0;
     background-size: cover;
-    top: 0;
+    top: 50px;
   }
   /* .interoritor-section:before {
     content: '';
@@ -1119,8 +1124,8 @@ h1.section-title {
     background-size: cover;
     top: 0;
   } */
-  .home-content, .interoritor-content{
-    margin-top: 420px;
+  .home-content{
+    margin-top: 455px;
     flex-grow: 0;
     flex-shrink: 0;
   }
@@ -1161,11 +1166,17 @@ h1.section-title {
   .services-main .row{
     grid-gap: 40px;
   }
-  .landing-page-bg{
+  /* .landing-page-bg{
     margin-top: 72px;
-  }
+  } */
   .featured-artist-main .row{
     grid-gap: 20px;
+  }
+  .gntvintroevent-section .col-md-10,
+  .beta-section .col-md-8,
+  .nda-section .col-md-8,
+  .featured-artist-main .section-title{
+    margin-top: 74px;
   }
   .download-content-sec {
     margin-top: 30px;
@@ -1191,6 +1202,12 @@ h1.section-title {
       object-fit: contain;
       object-position: center;
       width: 100%;
+      position: relative;
+      top: 40px;
+  }
+  .interoritor-section .interoritor-content {
+    height: 100%;
+    align-items: center;
   }
   .interior-inner{
     padding: 40px 20px;
