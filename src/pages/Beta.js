@@ -9,7 +9,7 @@ const Beta = () => {
       <Navbar/>
 
       <BetaTesterApplication/>
-
+      
       <Footer/>
     </>
   );

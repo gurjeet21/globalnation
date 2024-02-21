@@ -335,10 +335,20 @@ h1.section-title {
 }
 
 @media(min-width: 768px){
+  .nda-section, .beta-section{
+    position: relative;
+    background-image: url(./Assets/GNTV_BG_Landing-Page.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+  }
   .download-section .row,
   .beta-section .row,
   .gntvintroevent-section .row,
-  .featured-artist-main .row {
+  .featured-artist-main .row,
+  .interoritor-section .row {
     padding-top: 56px;
   }
   .nda-section .row{
@@ -411,6 +421,13 @@ h1.section-title {
 @media only screen and (min-width: 1023px) and (max-width: 1199px) {
   .interoritor-section{
     background-position: 36%;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .download-section .row, .beta-section .row, .gntvintroevent-section .row, .featured-artist-main .row, .interoritor-section .row {
+      padding-top: 86px!important;
   }
 }
 
@@ -515,15 +532,15 @@ h1.section-title {
   color: #b562d6 !important;
 }
 
-.home-header p, 
+.home-header p,
 .interoritor-header p {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 300;
 }
 
-.home-header a.join-btn, 
-.interoritor-header a.join-btn, 
+.home-header a.join-btn,
+.interoritor-header a.join-btn,
 .download-section .download-btn,
 .experience-content-section a.join-btn {
   background: #61d5d8;
@@ -552,7 +569,7 @@ h1.section-title {
   min-width: 130px!important;
 }
 
-.home-header a.join-btn:hover, 
+.home-header a.join-btn:hover,
 .interoritor-header a.join-btn:hover,
 .experience-content-section a.join-btn:hover{
   background: #000;
@@ -706,13 +723,13 @@ h1.section-title {
 
 .quick-links ul li {
   text-align: left;
-  padding: 5px;
+  padding: 3px;
 }
 
 .quick-links ul li a {
   text-decoration: none;
   color: #7A7A7A;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .footer-left-sec h2.heading-title {
@@ -1025,6 +1042,21 @@ h1.section-title {
 
 
 @media (max-width: 767px) {
+  .nda-section, .beta-section{
+    position: relative;
+    background-image: url(./Assets/GNTV_BG_Landing-Page_Mobile-Phone_02.01.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+  }
+  .nda-section iframe {
+    min-height: 3920px;
+  }
+	.beta-section iframe{
+		min-height: 1560px;
+	}
   .download-section p.download-main-para{
     margin-bottom: 20px!important;
   }
@@ -1082,9 +1114,20 @@ h1.section-title {
   .about-img {
     padding-top: 0 !important;
   }
-  .home-section, .interoritor-section {
+  .interoritor-section {
     position: relative;
     background-image: url(./Assets/GNTV_BG_Landing-Page_Mobile-Phone_02.01.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    height: 100vh;
+  }
+  
+  .home-section{
+    position: relative;
+    background-image: url(./Assets/GNTV_BG_Landing-Page_Mobile-Phone-Home-BG.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1095,20 +1138,6 @@ h1.section-title {
 
   .interoritor-section{
     display: block!important;
-  }
-  .home-section:before{
-    content: '';
-    background-image: url(./Assets/GNTV_BG_Landing-Page_Mobile-Phone.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    display: flex;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-size: cover;
-    top: 50px;
   }
   /* .interoritor-section:before {
     content: '';
@@ -1125,9 +1154,12 @@ h1.section-title {
     top: 0;
   } */
   .home-content{
-    margin-top: 455px;
+    margin-top: 390px;
     flex-grow: 0;
     flex-shrink: 0;
+  }
+  .home-header p{
+    margin-bottom: 10px!important;
   }
   .home-header h2.title,
   .interoritor-header h2.title{

@@ -5,7 +5,7 @@ const GntvIntroEvent = () => {
     return (
         <section>
             <Container fluid className="gntvintroevent-section landing-page-bg">
-                    <Row className="d-flex justify-content-center align-items-center vh-100">
+                    <Row className="d-flex justify-content-center align-items-center">
                         <Col md={10}>
                             <div className="embed-responsive embed-responsive-16by9 video-section">
                                 <div className="title">GNTV Intro Event</div>

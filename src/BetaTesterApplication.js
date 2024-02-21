@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 const BetaTesterApplication = () => {
   return (
     <section>
-      <Container fluid className="beta-section landing-page-bg d-flex justify-content-center align-items-center">
+      <Container fluid className="beta-section d-flex justify-content-center align-items-center">
         <Container fluid>
           <Row className="d-flex justify-content-center align-items-center min-vh-100">
             <Col md={8}>

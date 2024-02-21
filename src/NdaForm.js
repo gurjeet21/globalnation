@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 const NdaForm = () => {
   return (
     <section>
-      <Container fluid className="nda-section landing-page-bg d-flex justify-content-center align-items-center">
+      <Container fluid className="nda-section d-flex justify-content-center align-items-center">
         <Container fluid>
           <Row className="d-flex justify-content-center align-items-center min-vh-100">
             <Col md={8}>
