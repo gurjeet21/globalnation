@@ -18,7 +18,7 @@ const GntvIntroEvent = () => {
                                         ></iframe>
                                     </div>
                                 <div className="video-description">
-                                  At The Roxy Theater in Hollywood, Los Angeles, our CEO Todd Rundgren introduced GlobalNation™ to a small invited audience This is a recording of the live stream.
+                                At The Roxy Theater in Hollywood, Los Angeles, our CEO Todd Rundgren introduced GlobalNation™ to a small invited audience. This is a recording of the live stream.
                                 </div>
                             </div>
                         </Col>

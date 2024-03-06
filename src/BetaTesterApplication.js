@@ -9,6 +9,7 @@ const BetaTesterApplication = () => {
           <Row className="d-flex justify-content-center align-items-center min-vh-100">
             <Col md={8}>
               <div className="embed-responsive embed-responsive-16by9">
+              <h4 className="text-white text-center mb-4">This Form is in a frame. You may have to scroll within the frame to get to the bottom Submit button.</h4>
                 <iframe
                   title="Beta Tester Application Form"
                   width="100%"

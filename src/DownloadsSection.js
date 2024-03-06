@@ -1,53 +1,80 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import DownloadIcon from "./Assets/Svg/DownloadIocn";
 import EmailIcon from "./Assets/Svg/EmailIcon";
 
-const DownlaodSection = () => {
+const DownloadSection = () => {
+    const [apiData, setApiData] = useState({});
+
+    useEffect(() => {
+        // Fetch data from the API
+        const fetchData = async () => {
+            try {
+                const response = await fetch("https://admin.globalnation.tv/api/download-content");
+                const data = await response.json();
+                setApiData(data.download); // Access the 'download' property
+                console.log(data);
+            } catch (error) {
+                console.error("Error fetching data from API:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
+    const macos_download_path = process.env.PUBLIC_URL + '/interocitor-0.7.1-b2_arm64.pkg';
+    const window_download_path = process.env.PUBLIC_URL + '/interocitor-0.7.1-b2.msi';
     return (
         <Container fluid className='download-section landing-page-bg d-flex flex-column'>
             <Row className='justify-content-center align-items-center'>
                 <Col className="aspect-ratio aspect-ratio-1x1">
-                    <h1 className="section-title">Downloads</h1>
+                    <h1 className="section-title">{apiData.title && <h1>{apiData.title}</h1>}</h1>
+                    
                     <div className="download-content-sec">
-                    <div className="download-row">
-                        <div className="download-title">MacOS ARM v.0.7.1</div>
-                        <div className="download-button">
-                        <Link to="/beta" className="download-btn"><DownloadIcon/>Download</Link>
+                        {/* Render platform information (example: plateform_name) */}
+                        {apiData.plateform_name && (
+                            <div className="main-row">
+                                {apiData.plateform_name.map((platform, index) => (
+                                    <div className="download-row">
+                                        <div className="download-title" key={index}>{platform}</div>
+                                        <div className="download-button">
+                                            {/* <a href={macos_download_path} className="download-btn" rel="noopener noreferrer">
+                                            <DownloadIcon/>Download
+                                            </a> */}
+
+                                            <a
+                                                href={platform === 'MacOS ARM v.0.1.1*' ? macos_download_path : window_download_path}
+                                                className="download-btn"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <DownloadIcon /> Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        <div className="download-row">
+                            <div className="download-title">Android***</div>
+                            <div className="download-button">
+                            <a className="download-btn" href="mailto:beta@globalnation.tv?subject=Please%20add%20me%20to%20your%20Android%20Beta%20list!">
+                                <EmailIcon/>Email Us
+                            </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="download-row">
-                        <div className="download-title">Win X64 v.0.7.1*</div>
-                        <div className="download-button">
-                        <Link to="/beta" className="download-btn"><DownloadIcon/>Download</Link>
+                        <div className="download-row last-row">
+                            <div className="download-title">iOS/iPadOS***</div>
+                            <div className="download-button">
+                            <a className="download-btn" href="mailto:beta@globalnation.tv?subject=Please%20add%20me%20to%20your%20iOS%20Beta%20list!">
+                                <EmailIcon/>Email Us
+                            </a>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="download-row">
-                        <div className="download-title">Android**</div>
-                        <div className="download-button">
-                        <Link to="/beta" className="download-btn"><EmailIcon/>Email Us</Link>
+                    
+                        <div className="download-main-para text-white">
+                            {apiData.disclaimers && <p dangerouslySetInnerHTML={{ __html: apiData.disclaimers }} />}
                         </div>
-                    </div>
-
-                    <div className="download-row last-row">
-                        <div className="download-title">iOS/iPadOS**</div>
-                        <div className="download-button">
-                        <Link to="/beta" className="download-btn"><EmailIcon/>Email Us</Link>
-                        </div>
-                    </div>
-
-                    <p className="download-main-para">* On Windows, you might encounter the following issues:</p>
-                    <ul>
-                        <li>Notice from Microsoft Defender SmartScreen preventing an unrecognized app from starting. Choose “More Info”, then “Run anyway”.</li>
-                        <li>Notices from your antivirus/firewall. Choose to “allow access” to Interocitor.exe and network resources (that’s the term for Norton AV)</li>
-                    </ul>
-
-                    <p className="download-main-para">These issues can safely be ignored and will disappear once the apps have been downloaded and installed in greater numbers.</p>
-                    <p className="download-main-para"><span>** To test the apps for mobile platforms, we will need you to</span> send us the email address that you use to log into your respective app store! <span>(which might be different from your “regular” email address)</span></p>
-                    <p className="download-main-para"><span>Please send us</span> that email address with nothing else in the body of your email!</p>
                     </div>
                 </Col>
 
@@ -56,4 +83,4 @@ const DownlaodSection = () => {
     );
 };
 
-export default DownlaodSection;
+export default DownloadSection;
