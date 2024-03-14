@@ -9,6 +9,7 @@ import Featured from "./pages/Featured";
 import Interocitor from "./pages/Interocitor";
 import Beta from "./pages/Beta";
 import Download from "./pages/Downloads";
+import DownloadTest from "./pages/DownloadsTest";
 import NDA from "./pages/Nda";
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/interocitor" element={<Interocitor/>} />
           <Route path="/beta" element={<Beta/>} />
           <Route path="/downloads" element={<Download/>} />
+          <Route path="/downloads-test" element={<DownloadTest/>} />
           <Route path="/nda" element={<NDA/>} />
         </Routes>
       </Router>

@@ -47,6 +47,11 @@ button:focus {
   height: 100vh;
 }
 
+h1{
+  font-size: 36px!important;
+  line-height: 1.2!important;
+}
+
 /* --------- */
 /*Scrollbar   */
 /* --------- */
@@ -283,9 +288,9 @@ h1.section-title {
 
 .download-section .download-title {
   color: #8CEFE9;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 500;
-  line-height: 33.7px;
+  line-height: 1.2;
 }
 
 .download-section p {
@@ -706,11 +711,11 @@ h1.section-title {
 
 .quick-links h2{
   color: #61D5D8;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 1;
-  font-family: "Roboto", sans-serif;
+  font-size: 20px;
   text-align: left;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 500;
 }
 
 .quick-links ul {

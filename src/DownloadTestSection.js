@@ -10,9 +10,10 @@ const DownloadSection = () => {
         // Fetch data from the API
         const fetchData = async () => {
             try {
-                const response = await fetch("https://admin.globalnation.tv/api/download-content");
+                const response = await fetch("https://admin.globalnation.tv/api/download-test-content");
                 const data = await response.json();
                 setApiData(data.download); // Access the 'download' property
+                console.log(data);
             } catch (error) {
                 console.error("Error fetching data from API:", error);
             }
