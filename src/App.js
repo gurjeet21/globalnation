@@ -24,6 +24,8 @@ const App = () => {
           <Route path="/beta" element={<Beta/>} />
           <Route path="/downloads" element={<Download/>} />
           <Route path="/downloads-test" element={<DownloadTest/>} />
+          <Route path="/downloads/preview" element={<Download/>} />
+          <Route path="/downloads-test/preview" element={<DownloadTest/>} />
           <Route path="/nda" element={<NDA/>} />
         </Routes>
       </Router>

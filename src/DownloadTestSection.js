@@ -2,15 +2,22 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import DownloadIcon from "./Assets/Svg/DownloadIocn";
 import EmailIcon from "./Assets/Svg/EmailIcon";
+import {useLocation } from 'react-router-dom';
 
 const DownloadSection = () => {
     const [apiData, setApiData] = useState({});
+    const location = useLocation();
+    const { pathname } = location;
 
     useEffect(() => {
         // Fetch data from the API
         const fetchData = async () => {
             try {
-                const response = await fetch("https://admin.globalnation.tv/api/download-test-content");
+                let pageStatus = 1;
+                if(pathname === "/downloads-test/preview"){
+                    pageStatus = 2;
+                }
+                const response = await fetch(`https://admin.globalnation.tv/api/download-test-content?pagestatus=${pageStatus}`);
                 const data = await response.json();
                 setApiData(data.download); // Access the 'download' property
                 console.log(data);
