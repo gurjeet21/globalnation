@@ -6,6 +6,7 @@ import {useLocation } from 'react-router-dom';
 
 const DownloadSection = () => {
     const [apiData, setApiData] = useState({});
+    const [backgroundImage, setbackgroundImage] = useState(process.env.PUBLIC_URL +'/static/media/GNTV_BG_Landing-Page.651eb1397180fd19a27d.svg');
     const location = useLocation();
     const { pathname } = location;
 
@@ -20,6 +21,9 @@ const DownloadSection = () => {
                 const response = await fetch(`https://admin.globalnation.tv/api/download-content?pagestatus=${pageStatus}`);
                 const data = await response.json();
                 setApiData(data.download); // Access the 'download' property
+                if(data.download?.background_image != ""){
+                    setbackgroundImage(data.download?.background_image);
+                }
             } catch (error) {
                 console.error("Error fetching data from API:", error);
             }
@@ -30,7 +34,7 @@ const DownloadSection = () => {
     const macos_download_path = process.env.PUBLIC_URL + '/interocitor-0.7.1-b2_arm64.pkg';
     const window_download_path = process.env.PUBLIC_URL + '/interocitor-0.7.1-b2.msi';
     return (
-        <Container fluid className='download-section landing-page-bg d-flex flex-column'>
+        <Container fluid className='download-section landing-page-bg d-flex flex-column' style={{ backgroundImage: `url(${backgroundImage})` }}>
             <Row className='justify-content-center align-items-center'>
                 <Col className="aspect-ratio aspect-ratio-1x1">
                     <h1 className="section-title">{apiData.title && <h1>{apiData.title}</h1>}</h1>
