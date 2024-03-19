@@ -18,7 +18,7 @@ const DownloadSection = () => {
                 if(pathname === "/downloads/preview"){
                     pageStatus = 2;
                 }
-                const response = await fetch(`https://admin.globalnation.tv/api/download-content?pagestatus=${pageStatus}`);
+                const response = await fetch(`https://globalnation.tv/api/download-content?pagestatus=${pageStatus}`);
                 const data = await response.json();
                 setApiData(data.download); // Access the 'download' property
                 if(data.download?.background_image != ""){
@@ -37,7 +37,9 @@ const DownloadSection = () => {
         <Container fluid className='download-section landing-page-bg d-flex flex-column' style={{ backgroundImage: `url(${backgroundImage})` }}>
             <Row className='justify-content-center align-items-center'>
                 <Col className="aspect-ratio aspect-ratio-1x1">
-                    <h1 className="section-title">{apiData.title && <h1>{apiData.title}</h1>}</h1>
+                    <h1 className="section-title">
+                        {apiData.title && <p dangerouslySetInnerHTML={{ __html: apiData.title }} />}
+                    </h1>
                     
                     <div className="download-content-sec">
                         {/* Render platform information (example: plateform_name) */}
