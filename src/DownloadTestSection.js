@@ -18,7 +18,7 @@ const DownloadSection = () => {
                 if(pathname === "/downloads-test/preview"){
                     pageStatus = 2;
                 }
-                const response = await fetch(`https://globalnation.tv/api/download-test-content?pagestatus=${pageStatus}`);
+                const response = await fetch(`https://admin.globalnation.tv/api/download-test-content?pagestatus=${pageStatus}`);
                const data = await response.json();
                 setApiData(data.download); // Access the 'download' property
                 if(data.download?.background_image != ""){
@@ -50,12 +50,15 @@ const DownloadSection = () => {
                                     <div className="download-row">
                                         <div className="download-title" key={index}>{platform}</div>
                                         <div className="download-button">
-                                            {/* <a href={macos_download_path} className="download-btn" rel="noopener noreferrer">
-                                            <DownloadIcon/>Download
-                                            </a> */}
-
-                                            <a
+                                            {/* <a
                                                 href={platform === 'MacOS ARM v.0.1.1*' ? macos_download_path : window_download_path}
+                                                className="download-btn"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <DownloadIcon /> Download
+                                            </a> */}
+                                             <a
+                                                href={process.env.PUBLIC_URL + platform.plateform_file}
                                                 className="download-btn"
                                                 rel="noopener noreferrer"
                                             >
