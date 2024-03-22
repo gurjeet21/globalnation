@@ -57,13 +57,15 @@ const DownloadSection = () => {
                                             >
                                                 <DownloadIcon /> Download
                                             </a> */}
-                                             <a
-                                                href={process.env.PUBLIC_URL + platform.plateform_file}
-                                                className="download-btn"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <DownloadIcon /> Download
-                                            </a>
+                                             {apiData.plateform_file[index] && (
+                                                <a
+                                                    href={"https://admin.globalnation.tv/_uploads/builds/" + apiData.plateform_file[index]}
+                                                    className="download-btn"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <DownloadIcon /> Download
+                                                </a>
+                                            )}
                                         </div>
                                     </div>
                                 ))}
