@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {useLocation } from 'react-router-dom';
 
-const FeaturedArtistPreview = () => {
+const FeaturedArtistTest = () => {
     const [artistList, setartistList] = useState([]);
     const location = useLocation();
     const { pathname } = location;
@@ -11,9 +11,8 @@ const FeaturedArtistPreview = () => {
         // Fetch data from the API
         const fetchData = async () => {
             try {               
-                const response = await fetch(`https://admin.globalnation.tv/api/featured-artist-preview`);
+                const response = await fetch(`https://admin.globalnation.tv/api/featured-artist`);
                 const data = await response.json();
-                console.log(data);
                 setartistList(data.artists);
             } catch (error) {
                 console.error("Error fetching data from API:", error);
@@ -57,4 +56,4 @@ const FeaturedArtistPreview = () => {
     );
 };
 
-export default FeaturedArtistPreview;
+export default FeaturedArtistTest;
