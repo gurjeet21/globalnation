@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {useLocation } from 'react-router-dom';
 
-const FeaturedArtist = () => {
+const FeaturedArtistPreview = () => {
     const [artistList, setartistList] = useState([]);
     const location = useLocation();
     const { pathname } = location;
@@ -11,7 +11,7 @@ const FeaturedArtist = () => {
         // Fetch data from the API
         const fetchData = async () => {
             try {               
-                const response = await fetch(`https://admin.globalnation.tv/api/featured-artist`);
+                const response = await fetch(`https://admin.globalnation.tv/api/featured-artist-preview`);
                 const data = await response.json();
                 setartistList(data.artists);
             } catch (error) {
@@ -56,4 +56,4 @@ const FeaturedArtist = () => {
     );
 };
 
-export default FeaturedArtist;
+export default FeaturedArtistPreview;
