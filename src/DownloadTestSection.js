@@ -43,20 +43,12 @@ const DownloadSection = () => {
                     {apiData.title && <p dangerouslySetInnerHTML={{ __html: apiData.title }} />}
                     </h1>
                     <div className="download-content-sec">
-                        {/* Render platform information (example: plateform_name) */}
                         {apiData.plateform_name && (
                             <div className="main-row">
                                 {apiData.plateform_name.map((platform, index) => (
                                     <div className="download-row">
                                         <div className="download-title" key={index}>{platform}</div>
                                         <div className="download-button">
-                                            {/* <a
-                                                href={platform === 'MacOS ARM v.0.1.1*' ? macos_download_path : window_download_path}
-                                                className="download-btn"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <DownloadIcon /> Download
-                                            </a> */}
                                              {apiData.plateform_file[index] && (
                                                 <a
                                                     href={"https://admin.globalnation.tv/_uploads/builds/" + apiData.plateform_file[index]}
