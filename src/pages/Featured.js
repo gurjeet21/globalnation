@@ -11,7 +11,7 @@ const Featured = () => {
   return (
     <>
       <Navbar/>
-      {pathname === "/featured" ? (
+      {pathname === "/featured" || pathname === "/featured/" ? (
           <FeaturedArtist/>
       ) : (
         <FeaturedArtistPreview/>
