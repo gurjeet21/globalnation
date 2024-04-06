@@ -12,6 +12,9 @@ function Footer() {
     { label: 'Featured', url: '/featured' },
     { label: 'Interocitor™', url: '/interocitor' },
     { label: 'Beta', url: '/beta' },
+    { label: 'Knowledge Base', url: 'https://wiki.globalnation.tv' }, // External URL
+    { label: 'Term of service', url: '/term-of-service' },
+    { label: 'Privacy Policy', url: '/privacy-policy' },
   ];
 
   return (
@@ -38,8 +41,11 @@ function Footer() {
             <ul>
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  {/* Provide the 'to' prop for the Link component */}
-                  <Link to={link.url}>{link.label}</Link>
+                  {link.url.startsWith('http') || link.url.startsWith('www') ? (
+                    <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+                  ) : (
+                    <Link to={link.url}>{link.label}</Link>
+                  )}
                 </li>
               ))}
             </ul>

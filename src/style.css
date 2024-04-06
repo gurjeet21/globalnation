@@ -263,6 +263,38 @@ h1.section-title {
   color: #7A7A7A;
 }
 
+.privacypolicy-section h3{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #8cefe9;
+}
+
+.privacypolicy-section h4.italic{
+  font-style: italic;
+  color: #8cefe9;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.privacypolicy-section a{
+  color: #8cefe9;
+  text-decoration: none;
+}
+
+.privacypolicy-section a:hover{
+  color: #8cefe9;
+}
+
+.privacypolicy-section .section-title{
+  padding-top: 80px;
+}
+
+
+.privacypolicy-section .section-sub-title{
+  color: #8cefe9;
+}
+
 .beta-section,
 .nda-section {
   padding: 36px 26px;
