@@ -33,7 +33,7 @@ const App = () => {
           <Route path="/downloads-test/preview" element={<DownloadTest/>} />
           <Route path="/nda" element={<NDA/>} />
           <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
-          <Route path="/term-of-service" element={<TermService/>} />
+          <Route path="/terms-of-service" element={<TermService/>} />
         </Routes>
       </Router>
     </>

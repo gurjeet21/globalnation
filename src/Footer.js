@@ -13,7 +13,7 @@ function Footer() {
     { label: 'Interocitor™', url: '/interocitor' },
     { label: 'Beta', url: '/beta' },
     { label: 'Knowledge Base', url: 'https://wiki.globalnation.tv' }, // External URL
-    { label: 'Term of service', url: '/term-of-service' },
+    { label: 'Term of Service', url: '/terms-of-service' },
     { label: 'Privacy Policy', url: '/privacy-policy' },
   ];
 

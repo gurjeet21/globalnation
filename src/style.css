@@ -263,35 +263,47 @@ h1.section-title {
   color: #7A7A7A;
 }
 
-.privacypolicy-section h3{
+.privacypolicy-section h3,
+.termservice-section h3{
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
   color: #8cefe9;
 }
 
-.privacypolicy-section h4.italic{
+.privacypolicy-section h4.italic,
+.termservice-section h4.italic{
   font-style: italic;
   color: #8cefe9;
   font-size: 18px;
   line-height: 24px;
 }
 
-.privacypolicy-section a{
+.privacypolicy-section a,
+.termservice-section a{
   color: #8cefe9;
   text-decoration: none;
 }
 
-.privacypolicy-section a:hover{
+.privacypolicy-section a:hover,
+.termservice-section a:hover{
   color: #8cefe9;
 }
 
-.privacypolicy-section .section-title{
+.privacypolicy-section .section-title,
+.termservice-section .section-title{
   padding-top: 80px;
+  margin-bottom: 30px;
+}
+
+.privacypolicy-section p.text-white,
+.termservice-section p.text-white {
+  text-align: justify;
 }
 
 
-.privacypolicy-section .section-sub-title{
+.privacypolicy-section .section-sub-title,
+.termservice-section .section-sub-title{
   color: #8cefe9;
 }
 

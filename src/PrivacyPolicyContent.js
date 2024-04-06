@@ -7,14 +7,14 @@ const PrivacyPolicyContent = () => {
         <section>
             <Container fluid className="privacypolicy-section landing-page-bg d-flex align-items-center">
                 <Row className='justify-content-center align-items-center'>
-                    <h1 className="section-title">Privacy policy</h1>
+                    <h1 className="section-title text-center">Privacy Policy</h1>
                     <Col xs={12} md={8}>
                         <p className="text-white">Global Nation, Inc., its affiliates and subsidiaries (“Global Nation”), and its websites, applications including its subdomains together with all of their features and content and related or commonly-owned or operated websites, and applications, (the “Platform”), is made available by Global Nation.</p>
 
                         <h3>How This Privacy Policy Applies</h3>
                         <p className="text-white">Your privacy is very important to Global Nation, and in order to best protect your information, Global Nation has adopted this privacy policy (“Privacy Policy”), which applies to any and all information you submit to Global Nation in connection with your access to and/or use of the Platform. This Privacy Policy describes the information Global Nation collects from you through the Platform, how Global Nation uses that information, and its legal basis for doing so. It also covers whether and how that information may be shared and your rights and choices regarding the information you provide to Global Nation. It also covers whether and how that information may be shared and your rights and choices regarding such information.</p>
 
-                        <p className="text-white">By using the Platform, you are accepting the practices described in this Privacy Policy (including new versions of this Privacy Policy when and as they go into effect), and Global Nation’s  Terms of Use (link), which governs this Privacy Policy and contains all disclaimers of warranties and limitation of liabilities, and which constitutes a legally binding agreement between Global Nation and each individual, corporation, limited liability company, partnership, association, or other entity or party (a “Person”) that visits or uses the Platform (collectively, “Users,” and each, a “User”, “you” or “your”). Capitalized words not defined in this Privacy Policy are defined in the Terms of Use (link).</p>
+                        <p className="text-white">By using the Platform, you are accepting the practices described in this Privacy Policy (including new versions of this Privacy Policy when and as they go into effect), and Global Nation’s  <a href="/terms-of-service">Terms of Use</a>, which governs this Privacy Policy and contains all disclaimers of warranties and limitation of liabilities, and which constitutes a legally binding agreement between Global Nation and each individual, corporation, limited liability company, partnership, association, or other entity or party (a “Person”) that visits or uses the Platform (collectively, “Users,” and each, a “User”, “you” or “your”). Capitalized words not defined in this Privacy Policy are defined in the <a href="/terms-of-service">Terms of Use</a>.</p>
 
                         <h3>What Information Global Nation Collects and Receives</h3>
                         <p className="text-white">In order for you to use the Platform, Global Nation needs to collect and process certain information, which depending on how you use the Platform, may include:</p>
@@ -33,7 +33,7 @@ const PrivacyPolicyContent = () => {
                         <h3>Types of Cookies Global Nation Utilizes</h3>
                         <p className="text-white">Global Nation uses the following types of cookies and other technologies:</p>
                         <ul>
-                            <li className="text-white"><strong>Security:</strong> Global Nation secures the Platform with cookies that facilitate security features and allow Global Nation to detect activity that might violate the Terms of Use (link), such as unauthorized access or activity.</li>
+                            <li className="text-white"><strong>Security:</strong> Global Nation secures the Platform with cookies that facilitate security features and allow Global Nation to detect activity that might violate the <a href="/terms-of-service">Terms of Use</a>, such as unauthorized access or activity.</li>
                             <li className="text-white"><strong>Localization:</strong> Some cookies help Global Nation provide localized experiences, such as displaying the Platform in the local language.</li>
                             <li className="text-white"><strong>Site Features and Services:</strong> Certain cookies provide greater functionality to the Platform and help Global Nation deliver our products and services.</li>
                             <li className="text-white"><strong>Performance:</strong> Global Nation uses performance cookies to help route traffic between servers and understand how the Platform is performing so Global Nation can provide Users with the best experience possible.</li>
@@ -66,7 +66,7 @@ const PrivacyPolicyContent = () => {
                             <li className="text-white">To address inquiries and respond to customer service requests, questions, and comments</li>
                             <li className="text-white">To contact you with newsletters, offers, promotions, and other product specials or to customize your experience on the Platform</li>
                             <li className="text-white">To track and analyze use of the Platform and Global Nation’s services, such as to identify trends, conduct data analysis, and determine the effectiveness of marketing and promotion efforts, and other service offerings, so that Global Nation can improve how its performance and provide Users with the best experience possible</li>
-                            <li className="text-white">To maintain security and to enforce the Terms of Use (link) and comply with applicable law</li>
+                            <li className="text-white">To maintain security and to enforce the <a href="/terms-of-service">Terms of Use</a> and comply with applicable law</li>
                             <li className="text-white">For other purposes that Global Nation believes are necessary to protect its rights and the rights of others, or as otherwise described to you at the time of collection.</li>
                         </ul>
 
@@ -107,7 +107,7 @@ const PrivacyPolicyContent = () => {
                         <h4 className="italic">Information Global Nation Shares to Protect Global Nation and Comply with the Law</h4>
                         <p className="text-white">Global Nation reserves the right to disclose information Global Nation collects from or about you when doing so is reasonably necessary to comply with the law or law enforcement, to prevent fraud or abuse, or to protect Global Nation’s legal rights, property, or the safety of Global Nation, Users, or others. You hereby authorize Global Nation to share or disclose your personal information, including, without limitation, any content, records, or electronic communications of any kind, when Global Nation determines, in its sole discretion, that the disclosure of such information is necessary to identify, contact, or bring legal action against you if and to the extent:</p>
                         <ul>
-                            <li className="text-white">You are or may be violating the Terms of Use (link) or this Privacy Policy</li>
+                            <li className="text-white">You are or may be violating the <a href="/terms-of-service">Terms of Use</a> or this Privacy Policy</li>
                             <li className="text-white">You are interfering with the rights or property of Global Nation or a third party</li>
                             <li className="text-white">You are violating any applicable law, rule, or regulation</li>
                             <li className="text-white">Necessary or required by any applicable law, rule, or regulation and/or Requested by governmental authorities in the event of any investigation, act of terrorism, or instance of local, regional, or national emergency.</li>
