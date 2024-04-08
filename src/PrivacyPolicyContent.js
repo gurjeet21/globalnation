@@ -8,7 +8,7 @@ const PrivacyPolicyContent = () => {
             <Container fluid className="privacypolicy-section landing-page-bg d-flex align-items-center">
                 <Row className='justify-content-center align-items-center'>
                     <h1 className="section-title text-center">Privacy Policy</h1>
-                    <Col xs={12} md={8}>
+                    <Col xs={12} md={10}>
                         <p className="text-white">Global Nation, Inc., its affiliates and subsidiaries (“Global Nation”), and its websites, applications including its subdomains together with all of their features and content and related or commonly-owned or operated websites, and applications, (the “Platform”), is made available by Global Nation.</p>
 
                         <h3>How This Privacy Policy Applies</h3>

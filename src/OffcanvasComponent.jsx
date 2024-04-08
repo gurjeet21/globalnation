@@ -48,6 +48,24 @@ function OffcanvasComponent({ show, onHide }) {
               Beta
             </Nav.Link>
           </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link href="https://wiki.globalnation.tv" target="_blank">
+              Knowledge Base
+            </Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link as={NavLink} to="/terms-of-service">
+             Terms of Service
+            </Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link as={NavLink} to="/privacy-policy">
+             Privacy Policy
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
       </Offcanvas.Body>
     </Offcanvas>

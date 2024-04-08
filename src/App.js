@@ -13,6 +13,7 @@ import Download from "./pages/Downloads";
 import DownloadTest from "./pages/DownloadsTest";
 import NDA from "./pages/Nda";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import PrivacyPolicyTest from "./pages/PrivacyPolicyTest";
 import TermService from "./pages/TermService";
 
 const App = () => {
@@ -33,6 +34,8 @@ const App = () => {
           <Route path="/downloads-test/preview" element={<DownloadTest/>} />
           <Route path="/nda" element={<NDA/>} />
           <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+          <Route path="/privacy-policy-test" element={<PrivacyPolicyTest/>} />
+          <Route path="/privacy-policy-test/preview" element={<PrivacyPolicyTest/>} />
           <Route path="/terms-of-service" element={<TermService/>} />
         </Routes>
       </Router>

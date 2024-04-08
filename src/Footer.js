@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom"; // Change import
 import ScrollToTop from "./ScrollToTop";
 
 function Footer() {
@@ -13,7 +13,7 @@ function Footer() {
     { label: 'Interocitor™', url: '/interocitor' },
     { label: 'Beta', url: '/beta' },
     { label: 'Knowledge Base', url: 'https://wiki.globalnation.tv' }, // External URL
-    { label: 'Term of Service', url: '/terms-of-service' },
+    { label: 'Terms of Service', url: '/terms-of-service' },
     { label: 'Privacy Policy', url: '/privacy-policy' },
   ];
 
@@ -23,7 +23,7 @@ function Footer() {
       <Row>
         <Col md="8" className="footer-left-sec text-left">
           <h2 className="heading-title">
-            <Link to="/">Global<span>Nation™</span></Link>
+            <NavLink exact to="/" activeClassName="active">Global<span>Nation™</span></NavLink>
           </h2>
           <p>
             If you would like to know more about our mission or want to be an active part
@@ -44,7 +44,7 @@ function Footer() {
                   {link.url.startsWith('http') || link.url.startsWith('www') ? (
                     <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
                   ) : (
-                    <Link to={link.url}>{link.label}</Link>
+                    <NavLink exact to={link.url} activeClassName="active">{link.label}</NavLink>
                   )}
                 </li>
               ))}

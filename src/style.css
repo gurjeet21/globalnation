@@ -778,6 +778,10 @@ h1.section-title {
   font-weight: 400;
 }
 
+.quick-links ul li a.active {
+  color: #61D5D8;
+}
+
 .footer-left-sec h2.heading-title {
   text-align: left;
 }

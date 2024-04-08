@@ -8,7 +8,7 @@ const TermServiceContent = () => {
             <Container fluid className="termservice-section landing-page-bg d-flex align-items-center">
                 <Row className='justify-content-center align-items-center'>
                     <h1 className="section-title text-center">Terms of Service</h1>
-                    <Col xs={12} md={8}>
+                    <Col xs={12} md={10}>
                         <h3 className="section-sub-title">Welcome to Global Nation!</h3>
 
                         <p className="text-white"><strong>Introduction.</strong>  Thank you for using our platform and the products, services and tools that we offer (collectively, the “Service”). These Terms of Service form an agreement between you and us.  As with any agreement you should read it carefully and understand it before agreeing to its terms.  By using the Service, you represent that you have read, understood, and accept all of the terms and conditions contained herein (the “User Agreement”), as well as our <a href="/privacy-policy">Privacy Policy</a></p>
