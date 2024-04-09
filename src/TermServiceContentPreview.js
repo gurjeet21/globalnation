@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-const PrivacyPolicyContent = () => {
+const TermServiceContent = () => {
     const [pageData, setPageData] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://127.0.0.1:8000/api/all-pages");
+                const response = await fetch("http://127.0.0.1:8000/api/all-pages-preview");
                 const data = await response.json();
                 // Assuming the API response contains a 'pages' array
-                const privacyPolicyPage = data.pages.find(page => page.page_slug === 'privacy-policy');
-                setPageData(privacyPolicyPage);
+                const termsServicePage = data.pages.find(page => page.page_slug === 'terms-of-service');
+                setPageData(termsServicePage);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
@@ -38,4 +38,4 @@ const PrivacyPolicyContent = () => {
     );
 };
 
-export default PrivacyPolicyContent;
+export default TermServiceContent;
