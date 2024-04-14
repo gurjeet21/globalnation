@@ -7,7 +7,7 @@ const TermServiceContent = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://127.0.0.1:8000/api/all-pages");
+                const response = await fetch("https://admin.globalnation.tv/api/all-pages");
                 const data = await response.json();
                 // Assuming the API response contains a 'pages' array
                 const termsServicePage = data.pages.find(page => page.page_slug === 'terms-of-service');
