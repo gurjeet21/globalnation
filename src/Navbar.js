@@ -70,6 +70,12 @@ function NavBar() {
                   Beta
                 </Nav.Link>
               </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="https://wiki.globalnation.tv/" target="_blank" rel="noopener noreferrer">
+                  Knowledge Base
+                </Nav.Link>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
