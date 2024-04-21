@@ -4,6 +4,7 @@ import {useLocation } from 'react-router-dom';
 
 const FeaturedArtistPreview = () => {
     const [artistList, setartistList] = useState([]);
+    const [backgroundImage, setbackgroundImage] = useState(process.env.PUBLIC_URL +'/static/media/GNTV_BG_Landing-Page.651eb1397180fd19a27d.svg');
     const location = useLocation();
     const { pathname } = location;
 
@@ -15,6 +16,9 @@ const FeaturedArtistPreview = () => {
                 const data = await response.json();
                 console.log(data);
                 setartistList(data.artists);
+                if(data?.artists[0].background_image != ""){
+                    setbackgroundImage(data.artists[0].background_image);
+                }
             } catch (error) {
                 console.error("Error fetching data from API:", error);
             }
@@ -29,7 +33,7 @@ const FeaturedArtistPreview = () => {
     }
 
     return (
-        <Container fluid className='featured-artist-main landing-page-bg d-flex align-items-center'>
+        <Container fluid className='featured-artist-main landing-page-bg d-flex align-items-center' style={{ backgroundImage: `url(${backgroundImage})` }}>
             <Row className='align-items-center'>
                 <h1 className="section-title">Featured Artist</h1>
                 {artistList.map((artist, index) => (

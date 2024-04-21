@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const PrivacyPolicyContent = () => {
     const [pageData, setPageData] = useState(null);
-
+    const [backgroundImage, setbackgroundImage] = useState(process.env.PUBLIC_URL +'/static/media/GNTV_BG_Landing-Page.651eb1397180fd19a27d.svg');
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -11,6 +11,9 @@ const PrivacyPolicyContent = () => {
                 const data = await response.json();
                 // Assuming the API response contains a 'pages' array
                 const privacyPolicyPage = data.pages.find(page => page.page_slug === 'privacy-policy');
+                if(privacyPolicyPage?.background_image != ""){
+                    setbackgroundImage(privacyPolicyPage?.background_image);
+                }
                 setPageData(privacyPolicyPage);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -22,7 +25,7 @@ const PrivacyPolicyContent = () => {
 
     return (
         <section>
-            <Container fluid className="privacypolicy-section landing-page-bg d-flex align-items-center">
+            <Container fluid className="privacypolicy-section landing-page-bg d-flex align-items-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
                 <Row className='justify-content-center align-items-center'>
                     {pageData && (
                         <>
