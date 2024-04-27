@@ -15,6 +15,7 @@ import NDA from "./pages/Nda";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import PrivacyPolicyTest from "./pages/PrivacyPolicyTest";
 import TermService from "./pages/TermService";
+import DynamicPage from "./pages/DynamicPage";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/downloads/preview" element={<Download/>} />
           <Route path="/downloads-test/preview" element={<DownloadTest/>} />
           <Route path="/nda" element={<NDA/>} />
+          <Route path="/pages/:pageName" element={<DynamicPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
           <Route path="/privacy-policy/preview" element={<PrivacyPolicy/>} />
           <Route path="/privacy-policy-test" element={<PrivacyPolicyTest/>} />
