@@ -17,7 +17,7 @@ const Header = () => {
                   <p>GlobalNation™ is about supporting the creators whose work inspires you, and becoming a creator and inspiring others.</p>
                   <p>Join us to Create, Connect with other creators, and Collect their work in support of them.</p>
                
-                  <Link to="/downloads" className="join-btn">Downloads</Link>
+                  <Link to="/downloads" className="join-btn">Download</Link>
                 </Col>
               </Row>
             </Container>

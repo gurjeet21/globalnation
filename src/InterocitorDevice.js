@@ -17,7 +17,7 @@ const InterocitorDevice = () => {
                     <p>Use our Interocitor™ device (toolkit) to create unique experiences called “Shows”, that consist of assets from our toolkit library, or uploads from your own portfolio.</p>
                     <p>Assets can be animated with a number of modifiers and even respond to user actions to create interative shows.</p>
                     <p>Be one of the first creators to learn how to master our unique and powerful Interocitor™ device!</p>
-                    <Link to="/downloads" className="join-btn">Downloads</Link>
+                    <Link to="/downloads" className="join-btn">Download</Link>
                   </div>
                 </Col>
               </Row>

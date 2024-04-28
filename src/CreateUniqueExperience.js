@@ -19,7 +19,7 @@ function CreateUniqueExperience() {
           <div className="experience-content-section">
             <div className='title'>Create Unique Experiences</div>
             <p>With our Interocitor™, you can create experiences that you can share with other GNTV members and moderate your own content channels.</p>
-            <Link to="/downloads" className="join-btn">Downloads</Link>
+            <Link to="/downloads" className="join-btn">Download</Link>
           </div>
         </Col>
       </Row>
