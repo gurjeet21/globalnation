@@ -8,10 +8,10 @@ import Demo from "./pages/Demo";
 import Featured from "./pages/Featured";
 import FeaturedTest from "./pages/FeaturedTest";
 import Interocitor from "./pages/Interocitor";
-import Beta from "./pages/Beta";
+// import Beta from "./pages/Beta";
 import Download from "./pages/Downloads";
 import DownloadTest from "./pages/DownloadsTest";
-import NDA from "./pages/Nda";
+// import NDA from "./pages/Nda";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import PrivacyPolicyTest from "./pages/PrivacyPolicyTest";
 import TermService from "./pages/TermService";
@@ -28,12 +28,12 @@ const App = () => {
           <Route path="/featured-test" element={<FeaturedTest/>} />
           <Route path="/featured/preview" element={<FeaturedTest/>} />
           <Route path="/interocitor" element={<Interocitor/>} />
-          <Route path="/beta" element={<Beta/>} />
+          {/* <Route path="/beta" element={<Beta/>} /> */}
           <Route path="/downloads" element={<Download/>} />
           <Route path="/downloads-test" element={<DownloadTest/>} />
           <Route path="/downloads/preview" element={<Download/>} />
           <Route path="/downloads-test/preview" element={<DownloadTest/>} />
-          <Route path="/nda" element={<NDA/>} />
+          {/* <Route path="/nda" element={<NDA/>} /> */}
           <Route path="/pages/:pageName" element={<DynamicPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
           <Route path="/privacy-policy/preview" element={<PrivacyPolicy/>} />
