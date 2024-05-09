@@ -9,9 +9,9 @@ function Footer() {
   const quickLinks = [
     { label: 'Home', url: '/' },
     { label: 'Demo', url: '/demo' },
-    { label: 'Featured', url: '/featured' },
+    { label: 'Featured', url: '/artist/featured' },
     { label: 'Interocitor™', url: '/interocitor' },
-    { label: 'Downloads', url: '/downloads' },
+    { label: 'Downloads', url: '/download/downloads' },
     { label: 'Knowledge Base', url: 'https://wiki.globalnation.tv' }, // External URL
     { label: 'Terms of Service', url: '/terms-of-service' },
     { label: 'Privacy Policy', url: '/privacy-policy' },
