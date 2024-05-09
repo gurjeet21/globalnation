@@ -34,7 +34,11 @@ const App = () => {
           <Route path="/downloads/preview" element={<Download/>} />
           <Route path="/downloads-test/preview" element={<DownloadTest/>} />
           {/* <Route path="/nda" element={<NDA/>} /> */}
-          <Route path="/pages/:pageName" element={<DynamicPage />} />
+          <Route path="/pages/:pageName" element={<DynamicPage />} />          
+          <Route path="/download/:pageName" element={<Download />} />
+          <Route path="/download/:pageName/preview" element={<Download />} />
+          <Route path="/artist/:pageName" element={<Featured />} />
+          <Route path="/artist/:pageName/preview" element={<Featured />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
           <Route path="/privacy-policy/preview" element={<PrivacyPolicy/>} />
           <Route path="/privacy-policy-test" element={<PrivacyPolicyTest/>} />

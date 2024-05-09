@@ -12,8 +12,12 @@ const DynamicPageContent = () => {
         const fetchData = async () => {
             try {
                 const pathUrl = pathname.split('/')[2];
-                const response = await fetch(`https://admin.globalnation.tv/api/dynamicpage/${pathUrl}`);
-                //const response = await fetch(`http://127.0.0.1:8000/api/dynamicpage/${pathUrl}`);
+                let pageStatus = 1;              
+                if (pathname.includes("preview")) {
+                    pageStatus = 2;
+                }
+                const response = await fetch(`https://admin.globalnation.tv/api/dynamicpage/${pathUrl}?pagestatus=${pageStatus}`);
+                //const response = await fetch(`http://127.0.0.1:8000/api/dynamicpage/${pathUrl}?pagestatus=${pageStatus}`);
                 const data = await response.json();
                 // Assuming the API response contains a 'pages' array
                 if(data?.pages.background_image != ""){

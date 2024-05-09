@@ -11,9 +11,14 @@ const FeaturedArtist = () => {
     useEffect(() => {
         // Fetch data from the API
         const fetchData = async () => {
-            try {              
-                const response = await fetch(`https://admin.globalnation.tv/api/featured-artist`); 
-                // const response = await fetch(`http://127.0.0.1:8000/api/featured-artist`);
+            try {
+                let pageStatus = 1;              
+                if (pathname.includes("preview")) {
+                    pageStatus = 2;
+                }
+                const pathUrl = pathname.split('/')[2];
+                const response = await fetch(`https://admin.globalnation.tv/api/featured-artist?pagestatus=${pageStatus}&pageslug=${pathUrl}`); 
+                // const response = await fetch(`http://127.0.0.1:8000/api/featured-artist?pagestatus=${pageStatus}&pageslug=${pathUrl}`);
                 const data = await response.json();
                 setartistList(data.artists);
                 if(data?.artists[0].background_image != ""){

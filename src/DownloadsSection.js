@@ -14,11 +14,13 @@ const DownloadSection = () => {
         // Fetch data from the API
         const fetchData = async () => {
             try {
-                let pageStatus = 1;
-                if(pathname === "/downloads/preview"){
+                let pageStatus = 1;              
+                if (pathname.includes("preview")) {
                     pageStatus = 2;
                 }
-                const response = await fetch(`https://admin.globalnation.tv/api/download-content?pagestatus=${pageStatus}`);
+                const pathUrl = pathname.split('/')[2];
+                const response = await fetch(`https://admin.globalnation.tv/api/download-content?pagestatus=${pageStatus}&pageslug=${pathUrl}`);
+                // const response = await fetch(`http://127.0.0.1:8000/api/download-content?pagestatus=${pageStatus}&pageslug=${pathUrl}`);
                 const data = await response.json();
                 setApiData(data.download); // Access the 'download' property
                 if(data.download?.background_image != ""){
