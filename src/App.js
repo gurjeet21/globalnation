@@ -7,7 +7,7 @@ import Home from "./Home";
 import Demo from "./pages/Demo";
 import Featured from "./pages/Featured";
 import FeaturedTest from "./pages/FeaturedTest";
-import Interocitor from "./pages/Interocitor";
+
 // import Beta from "./pages/Beta";
 import Download from "./pages/Downloads";
 import DownloadTest from "./pages/DownloadsTest";
@@ -23,18 +23,19 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/demo" element={<Demo/>} />
+          <Route path="/:pageName" element={<DynamicPage />} />
+          {/* <Route path="/demo" element={<Demo/>} />
           <Route path="/featured" element={<Featured/>} />
           <Route path="/featured-test" element={<FeaturedTest/>} />
           <Route path="/featured/preview" element={<FeaturedTest/>} />
           <Route path="/interocitor" element={<Interocitor/>} />
-          {/* <Route path="/beta" element={<Beta/>} /> */}
+          {/* <Route path="/beta" element={<Beta/>} /> 
           <Route path="/downloads" element={<Download/>} />
           <Route path="/downloads-test" element={<DownloadTest/>} />
           <Route path="/downloads/preview" element={<Download/>} />
           <Route path="/downloads-test/preview" element={<DownloadTest/>} />
-          {/* <Route path="/nda" element={<NDA/>} /> */}
-          <Route path="/pages/:pageName" element={<DynamicPage />} />          
+          {/* <Route path="/nda" element={<NDA/>} /> 
+                    
           <Route path="/download/:pageName" element={<Download />} />
           <Route path="/download/:pageName/preview" element={<Download />} />
           <Route path="/artist/:pageName" element={<Featured />} />
@@ -44,7 +45,7 @@ const App = () => {
           <Route path="/privacy-policy-test" element={<PrivacyPolicyTest/>} />
           <Route path="/privacy-policy-test/preview" element={<PrivacyPolicyTest/>} />
           <Route path="/terms-of-service" element={<TermService/>} />
-          <Route path="/terms-of-service/preview" element={<TermService/>} />
+          <Route path="/terms-of-service/preview" element={<TermService/>} />*/}
         </Routes>
       </Router>
     </>

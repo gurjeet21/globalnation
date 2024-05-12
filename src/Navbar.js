@@ -54,7 +54,7 @@ function NavBar() {
               </Nav.Item>
 
               <Nav.Item>
-                <Nav.Link as={NavLink} to="/artist/featured">
+                <Nav.Link as={NavLink} to="/featured">
                   Featured
                 </Nav.Link>
               </Nav.Item>
@@ -66,7 +66,7 @@ function NavBar() {
               </Nav.Item>
 
               <Nav.Item>
-                <Nav.Link as={NavLink} to="/download/downloads">
+                <Nav.Link as={NavLink} to="/downloads">
                   Downloads
                 </Nav.Link>
               </Nav.Item>
